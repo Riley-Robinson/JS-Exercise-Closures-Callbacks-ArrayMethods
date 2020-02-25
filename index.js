@@ -222,11 +222,10 @@ function firstNamesAllCaps(runners) {
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
 function getRunnersByTShirtSize(runners, tshirtsize) {
-  return runners.filter(function(items) {
-    return tshirtsize.push(`${items.shirt_size}`)
-  });
-  return(tshirtsize);
-}
+  const newRunners = runners.filter(function(item){
+return item.shirt_size == tshirtsize;
+  })
+return newRunners}
 
 /**
  * ### Challenge `tallyUpDonations`
